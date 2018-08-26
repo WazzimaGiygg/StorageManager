@@ -1,0 +1,42 @@
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe.config
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.pdb
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csprojResolveAssemblyReference.cache
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Login.resources
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Properties.Resources.resources
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csproj.GenerateResource.Cache
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.exe
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.pdb
+C:\Users\Funec\Desktop\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Desktop.Desktop.resources
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe.config
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.exe
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.pdb
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.pdb
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csprojResolveAssemblyReference.cache
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Client.resources
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Desktop.Desktop.resources
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Login.resources
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Properties.Resources.resources
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csproj.GenerateResource.Cache
+C:\Users\Funec\Desktop\Storage Manager-20180824T215745Z-001\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Company.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe.config
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.exe
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\bin\Debug\Storage Manager.pdb
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csprojAssemblyReference.cache
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Client.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Company.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Country.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Desktop.Desktop.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Login.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Properties.Resources.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csproj.GenerateResource.cache
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.csproj.CoreCompileInputs.cache
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.exe
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage Manager.pdb
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.Product.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Saller.Saller.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Saller.Sellreg.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.adminkey.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Add.User.resources
+D:\C#\V4-20180825T021942Z-001\V4\Storage Manager\Storage Manager\Storage Manager\obj\Debug\Storage_Manager.Help.help.resources
