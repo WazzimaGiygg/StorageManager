@@ -1,0 +1,22 @@
+{
+    "00": {
+        "nome": "Informa\u00e7\u00e3o do Projeto",
+        "regras": {
+            "00": {
+                "nome": "Regra do Projeto",
+                "documentos": {
+                    "00": {
+                        "nome": "Documento do Projeto",
+                        "linhas": [
+                            [
+                                "00",
+                                "Gest\u00e3o de Solu\u00e7\u00f5es e Projetos na \u00c1rea da Informa\u00e7\u00e3o"
+                            ]
+                        ],
+                        "id_linha": 1
+                    }
+                }
+            }
+        }
+    }
+}

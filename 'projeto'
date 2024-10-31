@@ -1,0 +1,59 @@
+{
+    "projeto": "Projeto Novo",
+    "solucoes": [
+        {
+            "id": "solucao_01",
+            "regras": [
+                {
+                    "id": "regra_01",
+                    "documentos": [
+                        {
+                            "id": "documento_01",
+                            "linhas": {
+                                "linha_00": {
+                                    "nome_do_projeto": "Projeto Novo"
+                                }
+                            },
+                            "nome": "Documento Sem Nome"
+                        }
+                    ],
+                    "nome": "Regra Sem Nome"
+                }
+            ],
+            "nome": "Solu\u00e7\u00e3o Sem Nome"
+        },
+        {
+            "id": "00",
+            "regras": [
+                {
+                    "id": "8",
+                    "documentos": [],
+                    "nome": "Regra Sem Nome"
+                }
+            ],
+            "nome": "Solu\u00e7\u00e3o Sem Nome"
+        },
+        {
+            "id": "01",
+            "regras": [
+                {
+                    "id": "00",
+                    "nome": "Regra Geral",
+                    "documentos": [
+                        {
+                            "id": "00",
+                            "nome": "Documento de entrada",
+                            "linhas": {}
+                        }
+                    ]
+                }
+            ],
+            "nome": "Solu\u00e7\u00e3o Sem Nome"
+        },
+        {
+            "id": "01",
+            "nome": "Primeira Solu\u00e7\u00e3o",
+            "regras": []
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "00": {
+        "nome": "HTML",
+        "regras": {
+            "00": {
+                "nome": "HTML",
+                "documentos": {
+                    "00": {
+                        "nome": "HTML",
+                        "linhas": [
+                            [
+                                "00",
+                                "<!DOCTYPE html>"
+                            ],
+                            [
+                                "01",
+                                "<html lang=\"pt-BR\">"
+                            ]
+                        ],
+                        "id_linha": 2
+                    }
+                }
+            }
+        }
+    }
+}

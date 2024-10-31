@@ -1,0 +1,46 @@
+{
+    "00": {
+        "nome": "Solu\u00e7\u00e3o Informa\u00e7\u00e3o",
+        "regras": {
+            "00": {
+                "nome": "Regra Informa\u00e7\u00e3o",
+                "documentos": {
+                    "00": {
+                        "nome": "Documento de informa\u00e7\u00f5es",
+                        "linhas": [
+                            [
+                                "00",
+                                "GESPAI, Gest\u00e3o de Solu\u00e7\u00f5es e Projetos na \u00c1rea da Informa\u00e7\u00e3o"
+                            ],
+                            [
+                                "01",
+                                "Cada linha \u00e9 no m\u00e1ximo 127 caracteres."
+                            ],
+                            [
+                                "02",
+                                "Para otimizar a informa\u00e7\u00e3o e usa a mem\u00f3ria com precis\u00e3o,"
+                            ],
+                            [
+                                "03",
+                                "precisamos fazer um sistema novo que construimos para garantir a seguran\u00e7a,"
+                            ],
+                            [
+                                "04",
+                                "de todos os dados padronizados em sistemas \u00fanicos."
+                            ],
+                            [
+                                "05",
+                                "Listando projetos em solu\u00e7\u00f5es, regras, documentos e linhas com informa\u00e7\u00e3o,"
+                            ],
+                            [
+                                "06",
+                                "\u00e9 uma id\u00e9ia inovadora e simples e f\u00e1cil de ser manipulada."
+                            ]
+                        ],
+                        "id_linha": 7
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "projeto": "Projeto Novo",
+    "solucoes": [
+        {
+            "id": "solucao_01",
+            "regras": [
+                {
+                    "id": "regra_01",
+                    "documentos": [
+                        {
+                            "id": "documento_01",
+                            "linhas": {
+                                "linha_00": {
+                                    "nome_do_projeto": "Projeto Novo"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "00",
+            "regras": [
+                {
+                    "id": "8",
+                    "documentos": []
+                }
+            ]
+        },
+        {
+            "id": "01",
+            "regras": []
+        }
+    ]
+}

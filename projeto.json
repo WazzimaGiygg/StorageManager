@@ -1,0 +1,17 @@
+{
+    "00": {
+        "nome": "Informa\u00e7\u00e3oProjeto",
+        "regras": {
+            "00": {
+                "nome": "RegraProjeto",
+                "documentos": {
+                    "00": "DocumentoProjeto"
+                },
+                "linhas": []
+            }
+        },
+        "linhas": [
+            "Nome do Projeto: Projeto GESPAI"
+        ]
+    }
+}

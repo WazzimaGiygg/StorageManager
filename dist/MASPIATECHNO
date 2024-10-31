@@ -1,0 +1,163 @@
+import os
+import logging
+import socket
+import subprocess
+import threading
+import webbrowser
+import http.server
+import socketserver
+import tkinter as tk
+from tkinter import messagebox, filedialog
+import py_compile
+
+# Configuração do logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Função para encontrar uma porta livre automaticamente
+def find_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(('', 0))
+        return s.getsockname()[1]
+
+# Função para obter o melhor host disponível
+def get_best_host():
+    try:
+        return socket.gethostbyname("localhost")
+    except socket.error:
+        return "127.0.0.1"
+
+# Classe para gerenciar o servidor HTTP
+class ServerManager:
+    def __init__(self):
+        self.port = find_free_port()
+        self.host = get_best_host()
+        self.httpd = None
+        self.server_thread = None
+
+    def start_server(self):
+        handler = http.server.SimpleHTTPRequestHandler
+        class LoggingHandler(handler):
+            def do_GET(self):
+                logging.info(f"Request: {self.path}")
+                super().do_GET()
+
+        try:
+            self.httpd = socketserver.TCPServer((self.host, self.port), LoggingHandler)
+            logging.info(f"Servidor rodando em http://{self.host}:{self.port}")
+            self.server_thread = threading.Thread(target=self.httpd.serve_forever, daemon=True)
+            self.server_thread.start()
+        except OSError as e:
+            logging.error(f"Erro ao iniciar o servidor: {e}")
+
+    def stop_server(self):
+        if self.httpd:
+            self.httpd.shutdown()
+            self.httpd.server_close()
+            logging.info("Servidor encerrado.")
+
+# Funções principais
+def open_calculator():
+    logging.info("Calculadora aberta...")
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def restart_hosts():
+    try:
+        subprocess.run(["netsh", "interface", "set", "interface", "Ethernet", "disable"], check=True)
+        subprocess.run(["netsh", "interface", "set", "interface", "Ethernet", "enable"], check=True)
+        logging.info("Hosts reiniciados com sucesso.")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Erro ao reiniciar os hosts: {e}")
+
+def start_maspia():
+    html_content = """<sua string HTML aqui>"""  # Substitua pelo seu conteúdo HTML
+
+    base_dir = os.path.abspath('temp_html_maspia')
+    os.makedirs(base_dir, exist_ok=True)
+    html_file_path = os.path.join(base_dir, "index.html")
+    with open(html_file_path, "w", encoding='utf-8') as f:
+        f.write(html_content)
+
+    host = "localhost"
+    port = find_free_port()
+    class CustomHandler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, directory=base_dir, **kwargs):
+            super().__init__(*args, directory=directory, **kwargs)
+
+    try:
+        with socketserver.TCPServer((host, port), CustomHandler) as httpd:
+            logging.info(f"Servindo em: http://{host}:{port}/index.html")
+            webbrowser.open(f"http://{host}:{port}/index.html")
+            httpd.serve_forever()
+    except Exception as e:
+        logging.error(f"Erro ao iniciar o servidor: {e}")
+
+def convert_html_to_json():
+    html_content = """<sua string HTML aqui>"""  # Substitua pelo seu conteúdo HTML
+
+    base_dir = os.path.abspath('temp_html_maspia')
+    os.makedirs(base_dir, exist_ok=True)
+    html_file_path = os.path.join(base_dir, "converter.html")
+    with open(html_file_path, "w", encoding='utf-8') as f:
+        f.write(html_content)
+
+    host = "localhost"
+    port = 8000
+    class CustomHandler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, directory=base_dir, **kwargs):
+            super().__init__(*args, directory=directory, **kwargs)
+
+    try:
+        with socketserver.TCPServer((host, port), CustomHandler) as httpd:
+            logging.info(f"Servindo em: http://{host}:{port}/converter.html")
+            webbrowser.open(f"http://{host}:{port}/converter.html")
+            httpd.serve_forever()
+    except Exception as e:
+        logging.error(f"Erro ao iniciar o servidor: {e}")
+
+def import_and_compile():
+    file_path = filedialog.askopenfilename(
+        title="Selecione um arquivo Python",
+        filetypes=[("Python Files", "*.py")]
+    )
+
+    if file_path:
+        try:
+            compiled_file = py_compile.compile(file_path, cfile=file_path + 'c')
+            messagebox.showinfo("Sucesso", f"Arquivo compilado: {compiled_file}")
+            subprocess.run(['python', compiled_file])  # Executa o arquivo compilado
+        except Exception as e:
+            messagebox.showerror("Erro", f"Falha na compilação ou execução: {e}")
+    else:
+        messagebox.showwarning("Aviso", "Nenhum arquivo selecionado.")
+
+# Criando a interface gráfica
+def main_menu():
+    root = tk.Tk()
+    root.title("MASPIA Menu")
+    
+    menu = tk.Menu(root)
+    root.config(menu=menu)
+
+    # Menu de opções
+    options_menu = tk.Menu(menu)
+    menu.add_cascade(label="Opções", menu=options_menu)
+    
+    options_menu.add_command(label="Acessar Calculadora", command=open_calculator)
+    options_menu.add_command(label="Visualizador de JSON em Múltiplas Abas", command=start_maspia)
+    options_menu.add_command(label="Criar JSON Criptografado", command=convert_html_to_json)
+    options_menu.add_command(label="Reiniciar Hosts", command=restart_hosts)
+    options_menu.add_command(label="Importar e Compilar Arquivo Python", command=import_and_compile)
+    options_menu.add_separator()
+    options_menu.add_command(label="Sair", command=root.quit)
+
+    # Inicia o servidor
+    server_manager = ServerManager()
+    server_manager.start_server()
+
+    root.protocol("WM_DELETE_WINDOW", lambda: (server_manager.stop_server(), root.destroy()))
+    root.mainloop()
+
+if __name__ == "__main__":
+    main_menu()

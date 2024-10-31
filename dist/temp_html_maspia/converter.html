@@ -1,0 +1,117 @@
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de JSON Criptografado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285F4;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ae8;
+        }
+        .page-container {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Criar JSON Criptografado</h1>
+        <div id="pages"></div>
+        <button id="addPageButton">Adicionar Página</button>
+        <input type="password" id="encryptionPassword" placeholder="Senha para criptografia">
+        <button id="saveButton">Salvar como JSON</button>
+    </div>
+
+    <script>
+        let pageCount = 0;
+
+        document.getElementById('addPageButton').onclick = function() {
+            addPage();
+        };
+
+        document.getElementById('saveButton').onclick = function() {
+            saveAsJSON();
+        };
+
+        function addPage() {
+            pageCount++;
+            const pageContainer = document.createElement('div');
+            pageContainer.className = 'page-container';
+            pageContainer.innerHTML = `
+                <h3>Página ${pageCount}</h3>
+                <input type="text" placeholder="Título da Página ${pageCount}" class="page-title-input">
+                <textarea placeholder="Conteúdo da Página ${pageCount}" class="page-input"></textarea>
+            `;
+            document.getElementById('pages').appendChild(pageContainer);
+        }
+
+        function saveAsJSON() {
+            const password = document.getElementById('encryptionPassword').value;
+            if (!password) {
+                alert('Por favor, insira uma senha para criptografia.');
+                return;
+            }
+
+            const titles = document.querySelectorAll('.page-title-input');
+            const contents = document.querySelectorAll('.page-input');
+            const jsonData = {};
+
+            titles.forEach((titleInput, index) => {
+                const title = titleInput.value.trim();
+                const content = contents[index].value.trim();
+                if (title || content) {
+                    jsonData[title || `pagina${index + 1}`] = content;
+                }
+            });
+
+            const jsonString = JSON.stringify(jsonData);
+            const encryptedData = CryptoJS.AES.encrypt(jsonString, password).toString();
+
+            downloadJSON(encryptedData);
+        }
+
+        function downloadJSON(data) {
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dados.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,22 @@
+{
+    "00": {
+        "nome": "00",
+        "regras": {
+            "00": {
+                "nome": "00",
+                "documentos": {
+                    "00": {
+                        "nome": "00",
+                        "linhas": [
+                            [
+                                "00",
+                                "Gest\u00e3o de Solu\u00e7\u00f5es e Projetos na \u00c1rea  da Informa\u00e7\u00e3o"
+                            ]
+                        ],
+                        "id_linha": 1
+                    }
+                }
+            }
+        }
+    }
+}
